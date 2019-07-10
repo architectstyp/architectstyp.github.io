@@ -5,7 +5,6 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
   <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
-  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <title>TYP: Architects, tend your planet.</title>
   <link rel="canonical" href="https://architectstyp.com">
   <meta name="description" content="We are two architects working to build the leanest, healthiest, most resilient spaces possible. No drywall, no fuss. Tend your planet.">
@@ -49,41 +48,19 @@
       amp-story-page-attachment{
         color:#16161d;
       }
-      #sidebar{
-        color:#16161d;
-        margin:0;
-        width:320px;
-      }
-      ul{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      li{
-        font-size: 14px;
-        line-height: 0;
-        text-align:center;
-        border-left: 0px solid #050507;
-        border-right: 0px solid #fff;
-        border-top: 16.6666vh solid #fff;
-        border-bottom: 16.6666vh solid #fff;
-        transition: border-width 0.4s;
-      }
-      li:hover, li:active{
-          cursor: pointer;
-          color: #16161d;
-          border-left:20px solid #050507;
-          border-right:20px solid #fff;
-      }
       .middle{
-        padding-top:20vh;
+        padding-top:15vh;
       }
       .title{
         padding-top:40vh;
       }
       .wordmark{
-        margin:40vh auto 0 auto;
-        max-width:1400px;
+        margin:53vh auto 0 auto;
+        max-width:82vw;
+      }
+      .logo{
+        margin:53vh auto 0 auto;
+        max-width:26vw;
       }
       h1{
         font-family: 'Wavehaus', sans-serif;
@@ -110,7 +87,7 @@
         font-size: 60px;
         line-height: 50px;
         text-align: center;
-        padding:70px 0 20px 0;
+        padding:70px 0 55px 0;
       }
       h6{
         margin: 0;
@@ -122,7 +99,17 @@
       p{
         font-size: 14px;
         text-align:justify;
-        padding: 0 50px 0 50px;
+        padding: 36px 50px 0 50px;
+        margin-bottom:-10px;
+      }
+      ul{
+        list-style-type: none;
+        font-size: 14px;
+        padding: 36px 50px 0 50px;
+        margin-bottom:-10px;
+      }
+      li{
+        margin-bottom:10px;
       }
       @media all and (orientation:landscape) {
         h1 {
@@ -142,7 +129,12 @@
           padding-top:26vh;
         }
         .wordmark{
-          margin-top:20vh;
+          margin-top:43.5vh;
+          max-width:83vh;
+        }
+        .logo{
+          margin-top:43.5vh;
+          max-width:25vh;
         }
       }
   </style>
@@ -166,72 +158,108 @@
 <body>
   <amp-story standalone title="Architects, typ." publisher="Architects, typ." supports-landscape publisher-logo-src="https://example.com/logo/1x1.png" poster-portrait-src="https://example.com/my-story/poster/3x4.jpg" poster-square-src="https://example.com/my-story/poster/1x1.jpg" poster-landscape-src="https://example.com/my-story/poster/4x3.jpg">
 
-    <amp-sidebar id="sidebar" layout="nodisplay">
-      <ul>
-         <a><li>Our Work</li></a>
-         <a href="/about.html"><li>About Us</li></a>
-         <a href="mailto:hello@architectstyp.com?subject=Hello&body=Give us a call at 206 319 6915 or visit us in Roslyn, WA." target="_blank"><li>Contact</li></a>
-       </ul>
-     </amp-sidebar>
-
     <amp-story-page id="page1">
       <amp-story-grid-layer template="fill">
 
           <div class="wordmark">
-            <amp-img id="wordmarkTYP" src="/img2/WordmarkTYP.svg" width="10.57" height="6.05" layout="responsive"></amp-img>
+            <amp-img id="wordmark1" src="/img/WordmarkTYP.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
           </div>
 
           <div class="wordmark">
-            <amp-img id="wordmark1" animate-in="fly-in-bottom" animate-in-duration="0.3s" animate-in-delay="0.7s" src="/img2/Wordmark1.svg" width="10.57" height="6.05" layout="responsive"></amp-img>
+            <amp-img id="blank0" animate-in="fade-in" animate-in-duration="0.5s" src="/img/WordmarkBlank.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
           </div>
 
           <div class="wordmark">
-            <amp-img id="wordmark2" animate-in-after="wordmark1" animate-in="fly-in-bottom" animate-in-duration="0.3s" animate-in-delay="0.1s" src="/img2/Wordmark2.svg" width="10.57" height="6.05" layout="responsive"></amp-img>
+            <amp-img id="wordmark2" animate-in-after="blank0" animate-in="fly-in-left" animate-in-duration="0.25s" src="/img/WordmarkDrywall.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
           </div>
 
           <div class="wordmark">
-            <amp-img id="wordmark3" animate-in-after="wordmark2" animate-in="fly-in-bottom" animate-in-duration="0.3s" animate-in-delay="0.7s" src="/img2/Wordmark3.svg" width="10.57" height="6.05" layout="responsive"></amp-img>
+            <amp-img id="blank1" animate-in-after="wordmark2" animate-in="fade-in" animate-in-duration=".3s" src="/img/WordmarkBlank.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
           </div>
 
           <div class="wordmark">
-            <amp-img id="wordmarkFlare" animate-in-after="wordmark3" animate-in="fade-in" animate-in-duration="0.4s" src="/img2/WordmarkFlare.svg" width="10.57" height="6.05" layout="responsive"></amp-img>
+            <amp-img id="wordmark3" animate-in-after="blank1" animate-in="fly-in-left" animate-in-duration="0.25s" src="/img/WordmarkFuss.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
           </div>
 
           <div class="wordmark">
-            <amp-img id="wordmark" animate-in-after="wordmarkFlare" animate-in="fade-in" animate-in-duration="4s" animate-in-delay="0.3s" src="/img2/Wordmark.svg" width="10.57" height="6.05" layout="responsive"></amp-img>
+            <amp-img id="blank2" animate-in-after="wordmark3" animate-in="fade-in" animate-in-duration="0.8s" src="/img/WordmarkBlank.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
           </div>
 
+          <div class="wordmark">
+            <amp-img id="wordmark4" animate-in-after="blank2" animate-in="fly-in-left" animate-in-duration="0.25s" src="/img/WordmarkArchitects.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
+          </div>
+
+          <div class="wordmark">
+            <amp-img id="wordmark" animate-in-after="wordmark4" animate-in="fade-in" animate-in-duration=".3s" src="/img/WordmarkBlue.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
+          </div>
         </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="fill" animate-in-after="blank2" animate-in="fade-in" animate-in-duration=".3s" animate-in-timing-function="ease-in">
+            <amp-img id="img1" src="/img/Stars.svg" animate-in-after="blank2" animate-in="pan-right" translate-x="260px" animate-in-duration="10s" animate-in-timing-function="ease-out" layout="responsive" width="4" height="3"></amp-img>
+        </amp-story-grid-layer>
+
+        <amp-story-page-attachment layout="nodisplay" data-title="New Homes" data-cta-text="New Homes">
+          <ul>
+            <li><b>Tree House</b> in Roslyn, WA<br>Single family post-frame residence, targeting zero carbon and net zero energy accreditations.</li>
+            <li><b>Mount Tuam</b> on Salt Spring Island, BC<br>Construction starting September 2019. Single family post-frame residence, with low-energy and passive techniques.</li>
+            <li><b>Old Cluff</b> in Kennebunkport, ME<br>Single family residence with advanced framing, with low-energy and passive techniques.</li>
+          </ul>
+          <p>More information soon.
+          </p>
+        </amp-story-page-attachment>
     </amp-story-page>
 
 
     <amp-story-page id="page2">
       <amp-story-grid-layer template="fill">
-        <div animate-in="zoom-in" animate-in-duration="30s" scale-end="1.8" class="img-container">
-          <amp-img id="ken-burns-img1" src="https://picsum.photos/1600/1200?image=1077" animate-in="pan-left" animate-in-duration="30s" layout="fixed" width="1600" height="1200"></amp-img>
-        </div>
+          <amp-img id="img1" src="/img/Washington1.jpg" animate-in="pan-left" translate-x="160px" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="4504" height="3780"></amp-img>
+      </amp-story-grid-layer>
+
+      <amp-story-grid-layer template="fill" animate-in="fade-in" animate-in-duration="12s" animate-in-timing-function="ease-in-out">
+          <amp-img id="img2" src="/img/Washington2.jpg" animate-in="pan-left" translate-x="160px" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="4504" height="3780"></amp-img>
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="thirds">
         <div grid-area="middle-third" class="middle">
           <h2>Zero Carbon</h2>
-          <h6>A little something here. Just a tantelizing bite size of information for the soul.</h6>
+          <h6>By that we mean, every bit of energy put into these buildings is meaningful and offset.<br>We study the Whole Site Life Cycle Assessment so our buildings can be made efficient, from start to finish.</h6>
         </div>
       </amp-story-grid-layer>
 
-      <amp-story-page-attachment layout="nodisplay" data-cta-text="Read more">
-        <h3>Zero energy</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare ligula id purus finibus pretium. Donec sit amet tempus arcu, et vehicula orci. Aliquam vel tincidunt lorem. Proin suscipit lorem ante, ut laoreet lorem dignissim a. Curabitur accumsan sodales felis sit amet auctor. Integer porttitor, lorem vel iaculis facilisis, est nisi commodo mi, ac convallis felis dui nec massa.</p>
+      <amp-story-page-attachment layout="nodisplay" data-title="Our Vision" data-cta-text="Our Vision">
+        <p>We need to build better, now. Climate change is happening and the building and construction sector has been producing too many emissions, pollutants, and waste for too long.</p>
+        <p>Embodied carbon emissions from the building sector produce 11% of annual global greenhouse gas emissions.</p>
+        <p>The goal is a net-zero carbon footprint with net-zero off-site energy and operating emissions. We are meeting and exceeding the standards set by the globally recognized leader in sustainable building, the International Living Future Institute. Every building we build will stand up to their two measures: Zero Energy certification and Zero Carbon certification. We also meet and exceed the criteria for the US Department of Energy’s Zero Energy Ready homes, and the US Environmental Protection Agency’s Energy Star Homes. We utilize Watersense program products, perform HERS tests to ensure a very airtight home (think energy efficient).
+        <br><br>We build homes that can last 500 years, so that all the energy we put in to the building, is fully utilized throughout its lifetime. As a Whole Site Life Cycle Assessment, we assess the carbon footprint of every material, including every foot it travels and every bit of energy in its production. We then balance the equation of your site + construction + your home, to give you a net-zero carbon footprint. We embrace on-site renewable energy like solar panels so that the all the energy you produce is all the energy your home needs to run.
+        <br><br>We build homes that reduce construction waste. We design to best utilize standard material dimensions, and our exterior and interior walls contain the fewest and most highly efficient layers possible. Our structural system allows the exterior shell to be completely independent from the interior walls, which also means that your home’s 500 year lifespan can easily have many iterations.
+        <br><br>We build homes that reduce pollutants and eliminate toxins. All of our building materials are certified by Declare Labels and are free from the Red List. We use formaldehyde-free and low/no-VOC products throughout your home, whether it’s something you’ll touch everyday or never see.
+        <br><br>We help people make their existing homes better. Whether it’s a warmer “winter jacket,” or better summer shading that you desire, an update to your energy-consuming appliances, or just some help with laying things out, we are happy to assist you with any project, large or small.</p>
       </amp-story-page-attachment>
     </amp-story-page>
 
 
     <amp-story-page id="page3">
-      <amp-story-grid-layer template="thirds">
-        <div grid-area="middle-third" class="middle">
-            <h2>typ.</h2>
+      <amp-story-grid-layer template="fill">
+          <amp-img id="img4" src="/img/Cluff3.jpg" layout="responsive" width="2999" height="1906"></amp-img>
+      </amp-story-grid-layer>
+
+      <amp-story-grid-layer template="fill" animate-in="fade-in" animate-in-duration="6s" animate-in-timing-function="ease-in-out">
+          <amp-img id="img5" src="/img/Cluff2.jpg" layout="responsive" width="2999" height="1906"></amp-img>
+      </amp-story-grid-layer>
+
+      <amp-story-grid-layer template="fill">
+        <div class="logo">
+          <amp-img id="logo" src="/img/Logo.svg" width="1.45" height="0.78" layout="responsive"></amp-img>
         </div>
       </amp-story-grid-layer>
+
+      <amp-story-page-attachment layout="nodisplay" data-title="Architects, tend your planet." data-cta-text="About Us">
+        <p>Mark and Annie are two architects working to build the leanest, most resilient spaces possible. We want to design and build by leading with a true priority: Climate Change. We acknowledge that the architectural and construction industries have done too little, too late, and we are doing our best to catch up to the needs of our planet.<br><br>
+        Both registered architects, with diverse design experience covering residential, hospitality, public, and landscape projects, we bring our full attention and passion to what we do. We enjoy all aspects of project design, merging our inclination to explore by hand on paper with a realistic understanding of the role of digital data and modeling. Together, we have developed a method of building homes that we think is the most energy, cost, and time-efficient on the market, while it also includes adaptability and flexibility for each occupant and environment.<br><br>
+        Our firm is committed to the 2030 Challenge, life-cycle assessment tools, energy modeling, and multiple levels of green certification metrics, including The Living Building Challenge, Passive House, Built Green, US Department of Energy.</p>
+        <p>From Mark: I feel a deep urgency to my work. The goal is to develop rapidly deployable, resilient, and affordable homes—with a little fun sprinkled in.<br><br>
+        From Annie: I am driven to pursue designs that are reasonable, balanced, prudent and frugal—to me the definition of problem-solving solutions.</p>
+      </amp-story-page-attachment>
     </amp-story-page>
 
 
@@ -240,37 +268,43 @@
           "bookendVersion": "v1.0",
           "shareProviders": [
             {
-              "provider": "facebook",
-              "app_id": "328322627852543"
-            },
-            "linkedin"
+              "provider": "email",
+              "recipient": "hello@architectstyp.com",
+              "body": "What are you looking to build? Give us a call at 206 319 6915 or email us at hello@architectstyp.com.",
+              "subject": "typ."
+            }
           ],
           "components": [
             {
               "type": "heading",
-              "text": "More to read"
+              "text": "Contact"
             },
             {
               "type": "cta-link",
               "links": [
                 {
-                  "text": "Sign Up",
-                  "url": "example.com/signup"
-                },
-                {
-                  "text": "Subscribe",
-                  "url": "example.com/subscribe"
+                  "text": "Email Us",
+                  "url": "mailto:hello@architectstyp.com"
                 }
               ]
             },
             {
-              "type": "textbox",
-              "text": [
-                "Food by Enrique McPizza",
-                "Choreography by Gabriel Filly",
-                "Script by Alan Ecma S.",
-                "Direction by Jon Tarantino"
-              ]
+              "type": "heading",
+              "text": "Work"
+            },
+            {
+              "type": "landscape",
+              "title": "TRAPPIST-1 Planets May Still Be Wet Enough for Life",
+              "url": "http://example.com/article.html",
+              "category": "astronomy",
+              "image": "http://placehold.it/256x128"
+            },
+            {
+              "type": "landscape",
+              "title": "TRAPPIST-1 Planets May Still Be Wet Enough for Life",
+              "url": "http://example.com/article.html",
+              "category": "astronomy",
+              "image": "http://placehold.it/256x128"
             }
           ]
        }
