@@ -32,11 +32,11 @@
         text-decoration: inherit;
         outline:none;
         font-weight:inherit;
-        border-bottom: .5px dashed #666;
         background-color: transparent;
+        font-weight:bold;
       }
       a:hover {
-        color:#96DED1;
+        color:#007fff;
         cursor: pointer;
       }
       q {
@@ -90,27 +90,65 @@
         padding:70px 0 55px 0;
       }
       h6{
-        margin: 0;
-        font-weight: normal;
-        font-size: 14px;
-        text-align:center;
-        padding: 0 30px 0 30px;
+        visibility: hidden;
+      }
+      .textBox{
+        padding: 0 25px 25px 25px;
       }
       p{
+        initial-letter: 2;
         font-size: 14px;
         text-align:justify;
-        padding: 36px 50px 0 50px;
-        margin-bottom:-10px;
+        margin-top: 25px;
+      }
+      figcaption{
+        font-size: 14px;
+        margin-top: 15px;
+      }
+      .flexBox{
+        display:flex;
+        margin:25px 0 0 0;
+      }
+      .imageBox{
+        margin:25px 0 0 0;
+      }
+      .inline{
+        margin:1px;
+        border-radius: 2.5px;
+      }
+      .side{
+        flex:50%;
+        margin:1px;
+      }
+      .imgBottom {
+        border-radius: 2.5px;
+      }
+      .imgTop {
+        position: relative;
+        margin-top:-70.9%;
+        opacity:0;
+        z-index: 99;
+        transition: opacity .5s;
+        border-radius: 2.5px;
+      }
+      .side:hover .imgTop {
+        opacity:1;
+      }
+      .columns{
+        column-count:2;
+        column-gap:25px;
+        margin-top:25px;
+      }
+      .columns p{
+        margin:0;
       }
       ul{
         list-style-type: none;
         font-size: 14px;
-        padding: 36px 50px 0 50px;
         margin-bottom:-10px;
       }
       li{
-        margin-bottom:10px;
-      }
+        }
       @media all and (orientation:landscape) {
         h1 {
            font-size: 12vh;
@@ -135,6 +173,29 @@
         .logo{
           margin-top:43.5vh;
           max-width:25vh;
+        }
+      }
+      @media all and (min-width: 800px) {
+        h6{
+          visibility: visible;
+          margin: 0;
+          font-weight: normal;
+          font-size: 14px;
+          text-align:center;
+          padding: 0 30px 0 30px;
+        }
+        .textBox{
+          padding: 55px 80px 70px 80px;
+        }
+        .flexBox{
+          display:flex;
+          margin:50px 0 50px 0;
+        }
+        .imageBox{
+          margin:50px 0 50px 0;
+        }
+        .columns{
+          column-count:2;
         }
       }
   </style>
@@ -199,13 +260,22 @@
         </amp-story-grid-layer>
 
         <amp-story-page-attachment layout="nodisplay" data-title="New Homes" data-cta-text="New Homes">
-          <ul>
-            <li><b>Tree House</b> in Roslyn, WA<br>Single family post-frame residence, targeting zero carbon and net zero energy accreditations.</li>
-            <li><b>Mount Tuam</b> on Salt Spring Island, BC<br>Construction starting September 2019. Single family post-frame residence, with low-energy and passive techniques.</li>
-            <li><b>Old Cluff</b> in Kennebunkport, ME<br>Single family residence with advanced framing, with low-energy and passive techniques.</li>
-          </ul>
-          <p>More information soon.
-          </p>
+          <div class="textBox">
+            <p>Hot off the drafting board. For a more extensive look at our work, see our personal bios.</p>
+            <div class="imageBox">
+              <a href="https://photos.app.goo.gl/iPoxJV8w8Tfj9Paz6" target="_blank"><amp-img class="inline" alt="Post-Coal Thumbnail" src="/img/Tuam2.jpg" layout="responsive" width="2048" height="2048"></amp-img></a>
+              <figcaption><a href="https://photos.app.goo.gl/iPoxJV8w8Tfj9Paz6" target="_blank">Post-Coal</a> in Roslyn, WA<br>New 1,400 sf home, in schematic design<br>Post-frame, zero-carbon, and zero-energy</figcaption>
+            </div>
+            <div class="imageBox">
+              <a href="https://photos.app.goo.gl/tvas6VN9yNa2g2hp6" target="_blank"><amp-img class="inline" alt="Mount Tuam Thumbnail" src="/img/Tuam1.jpg" layout="responsive" width="3871" height="954"></amp-img></a>
+              <figcaption><a href="https://photos.app.goo.gl/tvas6VN9yNa2g2hp6" target="_blank">Mount Tuam</a> on Salt Spring Island, BC<br>New 4,460 sf home and 550 sf cottage, under construction<br>Post-frame with large window wall, using healthy materials and low-energy detailing</figcaption>
+            </div>
+            <div class="imageBox">
+              <a href="https://photos.app.goo.gl/wHBJJRBc2MPvDBEc8" target="_blank"><amp-img class="inline" alt="Old Cluff Thumbnail" src="/img/Cluff1.jpg" layout="responsive" width="3840" height="2091"></amp-img></a>
+              <figcaption><a href="https://photos.app.goo.gl/wHBJJRBc2MPvDBEc8" target="_blank">Old Cluff</a> in Kennebunkport, ME<br>New 1,380 sf home, under construction<br>Advanced framing, using cost effective and passive techniques</figcaption>
+            </div>
+            <p>We are actively soliciting new work in the US and Canada. Please contact us or refer someone you know for any project, large or small. Check back for frequent updates on our active projects.</p>
+          </div>
         </amp-story-page-attachment>
     </amp-story-page>
 
@@ -222,7 +292,7 @@
       <amp-story-grid-layer template="thirds">
         <div grid-area="middle-third" class="middle">
           <h2>Zero Carbon</h2>
-          <h6>By that we mean, every bit of energy put into these buildings is meaningful and offset.<br>We study the Whole Site Life Cycle Assessment so our buildings can be made efficient, from start to finish.</h6>
+          <h6>Every joule of energy put into these buildings is meaningful and offset.<br>We study the Whole Site Life Cycle Assessment to make our buildings efficient, from start to forever.</h6>
         </div>
       </amp-story-grid-layer>
 
@@ -254,14 +324,32 @@
       </amp-story-grid-layer>
 
       <amp-story-page-attachment layout="nodisplay" data-title="Architects, tend your planet." data-cta-text="About Us">
-        <p>Mark and Annie are two architects working to build the leanest, most resilient spaces possible. We want to design and build by leading with a true priority: Climate Change. We acknowledge that the architectural and construction industries have done too little, too late, and we are doing our best to catch up to the needs of our planet.<br><br>
-        Both registered architects, with diverse design experience covering residential, hospitality, public, and landscape projects, we bring our full attention and passion to what we do. We enjoy all aspects of project design, merging our inclination to explore by hand on paper with a realistic understanding of the role of digital data and modeling. Together, we have developed a method of building homes that we think is the most energy, cost, and time-efficient on the market, while it also includes adaptability and flexibility for each occupant and environment.<br><br>
-        Our firm is committed to the 2030 Challenge, life-cycle assessment tools, energy modeling, and multiple levels of green certification metrics, including The Living Building Challenge, Passive House, Built Green, US Department of Energy.</p>
-        <p>From Mark: I feel a deep urgency to my work. The goal is to develop rapidly deployable, resilient, and affordable homes—with a little fun sprinkled in.<br><br>
-        From Annie: I am driven to pursue designs that are reasonable, balanced, prudent and frugal—to me the definition of problem-solving solutions.</p>
+        <div class="textBox">
+          <p>We are architects working to build the leanest, most resilient spaces possible. We want to design and build by leading with a true priority: Climate Change. We acknowledge that the architectural and construction industries have done too little, too late, and we are doing our best to catch up to the needs of our planet.<br><br>
+            Both registered architects, with diverse design experience covering residential, hospitality, public, and landscape projects, we bring our full attention and passion to what we do. We enjoy all aspects of project design, merging our inclination to explore by hand on paper with a realistic understanding of the role of digital data and modeling. Together, we have developed a method of building homes that we think is the most energy, cost, and time-efficient on the market, while it also includes adaptability and flexibility for each occupant and environment.</p>
+          <div class="flexBox">
+            <div class="side" interactive><a href="https://annelise.info" target="_blank">
+              <amp-img alt="Annelise Aldrich Outtake" class="imgBottom" src="/img/Annelise1.jpg" layout="responsive" width="4032" height="2858"></amp-img>
+              <amp-img alt="Annelise Aldrich" class="imgTop" src="/img/Annelise2.jpg" layout="responsive" width="4032" height="2858"></amp-img>
+            </a></div>
+            <div class="side" interactive><a href="http://mwkeller.com" target="_blank">
+              <amp-img alt="Mark Keller Outtake" class="imgBottom" src="/img/Mark1.jpg" layout="responsive" width="4032" height="2858"></amp-img>
+              <amp-img alt="Mark Keller" class="imgTop" src="/img/Mark2.jpg" layout="responsive" width="4032" height="2858"></amp-img>
+            </a></div>
+          </div>
+          <div class="columns">
+            <p><a href="https://annelise.info" target="_blank">Annelise Aldrich</a><br>
+              Registered Architect<br>Partner, AIA<br><br>
+              I am driven to pursue designs that are reasonable, balanced, prudent and frugal—to me the definition of problem-solving solutions.
+            </p>
+            <p><a href="http://mwkeller.com" target="_blank">Mark Keller</a><br>
+              Registered Architect<br>Partner<br><br>
+              I feel a deep urgency to my work. The goal is to develop rapidly deployable, resilient, and affordable homes—with a little fun sprinkled in.
+            </p>
+          </div>
+        </div>
       </amp-story-page-attachment>
     </amp-story-page>
-
 
     <amp-story-bookend layout="nodisplay">
       <script type="application/json">{
@@ -277,34 +365,117 @@
           "components": [
             {
               "type": "heading",
-              "text": "Contact"
+              "text": "Get in touch with us "
             },
             {
               "type": "cta-link",
               "links": [
                 {
-                  "text": "Email Us",
+                  "text": "Email",
                   "url": "mailto:hello@architectstyp.com"
+                },
+                {
+                  "text": "Instagram",
+                  "url": "http://instagram.com"
+                },
+                {
+                  "text": "LinkedIn",
+                  "url": "http://linkedin.com"
+                },
+                {
+                  "text": "Facebook",
+                  "url": "http://facebook.com"
+                },
+                {
+                  "text": "206 319 6915",
+                  "url": "tel:+12063196915"
                 }
               ]
             },
             {
+              "type": "textbox",
+              "text": [
+                "We care about making architectural design accessible to everyone in our community, so we offer eight hours of consultation free.",
+                "Tell us about your next new build, renovation, or addition.",
+                "We can sketch out some ideas with you and offer resources for material selection, contractors, and code requirements."
+              ]
+            },
+            {
+              "type": "textbox",
+              "text": [
+                " "
+              ]
+            },
+            {
               "type": "heading",
-              "text": "Work"
+              "text": "Our Work"
             },
             {
               "type": "landscape",
-              "title": "TRAPPIST-1 Planets May Still Be Wet Enough for Life",
-              "url": "http://example.com/article.html",
-              "category": "astronomy",
+              "title": "Post-Coal",
+              "url": "https://photos.app.goo.gl/iPoxJV8w8Tfj9Paz6",
+              "category": "New Home, Schematics",
               "image": "http://placehold.it/256x128"
             },
             {
               "type": "landscape",
-              "title": "TRAPPIST-1 Planets May Still Be Wet Enough for Life",
-              "url": "http://example.com/article.html",
-              "category": "astronomy",
+              "title": "Mount Tuam",
+              "url": "https://photos.app.goo.gl/tvas6VN9yNa2g2hp6",
+              "category": "New Home, Under Construction",
               "image": "http://placehold.it/256x128"
+            },
+            {
+              "type": "landscape",
+              "title": "Old Cluff",
+              "url": "https://photos.app.goo.gl/wHBJJRBc2MPvDBEc8",
+              "category": "New Home, Under Construction",
+              "image": "http://placehold.it/256x128"
+            },
+            {
+              "type": "landscape",
+              "title": "Sacred Mountain",
+              "url": "https://photos.app.goo.gl/aJ875Nvo4QcSX1Tc7",
+              "category": "New Home, Construction Documents",
+              "image": "http://placehold.it/256x128"
+            },
+            {
+              "type": "landscape",
+              "title": "Sketches & Studies",
+              "url": "https://photos.app.goo.gl/dAbtGfy9s4dWFaDo9",
+              "category": "Other",
+              "image": "http://placehold.it/256x128"
+            },
+            {
+              "type": "textbox",
+              "text": [
+                " "
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "Who We Are"
+            },
+            {
+              "type": "textbox",
+              "text": [
+                " ",
+                "Folks here in North America deserve homes that actually function. We are two architects working to build the most lean, healthy, and resilient spaces possible. No drywall, no fuss.",
+                " "
+              ]
+            },
+            {
+              "type": "landscape",
+              "title": "Annelise Aldrich",
+              "category": "Partner",
+              "url": "https://annelise.info",
+              "image": "/img/Annelise1.jpg"
+            },
+            {
+              "type": "landscape",
+              "title": "Mark Keller",
+              "category": "Partner",
+              "url": "http://mwkeller.com",
+              "image": "/img/Mark1.jpg"
             }
           ]
        }
