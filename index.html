@@ -211,7 +211,7 @@
     // "logo":"https://bad.house/img/logo.png",
     // "image": "https://bad.house/img/snippet.jpg",
     "email":"hello@architectstyp.com",
-    "telephone":"206 319 6915",
+    "telephone":"509 731 3025",
     "url":"https://architectstyp.com"
   }</script>
 </head>
@@ -219,44 +219,55 @@
 <body>
   <amp-story standalone title="Architects, typ." publisher="Architects, typ." supports-landscape publisher-logo-src="https://example.com/logo/1x1.png" poster-portrait-src="https://example.com/my-story/poster/3x4.jpg" poster-square-src="https://example.com/my-story/poster/1x1.jpg" poster-landscape-src="https://example.com/my-story/poster/4x3.jpg">
 
-    <amp-story-page id="page1">
-      <amp-story-grid-layer template="fill">
-
+    <amp-story-page id="page0" auto-advance-after="2s"  >
+        <amp-story-grid-layer template="fill">
           <div class="wordmark">
             <amp-img id="wordmark1" src="/img/WordmarkTYP.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
           </div>
+        </amp-story-grid-layer>
 
+        <amp-story-grid-layer template="fill">
           <div class="wordmark">
-            <amp-img id="blank0" animate-in="fade-in" animate-in-duration="0.5s" src="/img/WordmarkBlank.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
-          </div>
-
-          <div class="wordmark">
-            <amp-img id="wordmark2" animate-in-after="blank0" animate-in="fly-in-left" animate-in-duration="0.25s" src="/img/WordmarkDrywall.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
-          </div>
-
-          <div class="wordmark">
-            <amp-img id="blank1" animate-in-after="wordmark2" animate-in="fade-in" animate-in-duration=".3s" src="/img/WordmarkBlank.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
-          </div>
-
-          <div class="wordmark">
-            <amp-img id="wordmark3" animate-in-after="blank1" animate-in="fly-in-left" animate-in-duration="0.25s" src="/img/WordmarkFuss.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
-          </div>
-
-          <div class="wordmark">
-            <amp-img id="blank2" animate-in-after="wordmark3" animate-in="fade-in" animate-in-duration="0.8s" src="/img/WordmarkBlank.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
-          </div>
-
-          <div class="wordmark">
-            <amp-img id="wordmark4" animate-in-after="blank2" animate-in="fly-in-left" animate-in-duration="0.25s" src="/img/WordmarkArchitects.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
-          </div>
-
-          <div class="wordmark">
-            <amp-img id="wordmark" animate-in-after="wordmark4" animate-in="fade-in" animate-in-duration=".3s" src="/img/WordmarkBlue.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
+            <amp-img id="wordmark2" animate-in="fly-in-left" animate-in-delay="0.5s" animate-in-duration="0.25s" src="/img/WordmarkDrywall.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
           </div>
         </amp-story-grid-layer>
 
-        <amp-story-grid-layer template="fill" animate-in-after="blank2" animate-in="fade-in" animate-in-duration=".3s" animate-in-timing-function="ease-in">
-            <amp-img id="img1" src="/img/Stars.svg" animate-in-after="blank2" animate-in="pan-right" translate-x="260px" animate-in-duration="10s" animate-in-timing-function="ease-out" layout="responsive" width="4" height="3"></amp-img>
+        <amp-story-grid-layer template="fill">
+          <div class="wordmark">
+            <amp-img id="wordmark3" animate-in-after="wordmark2" animate-in-delay="0.3s" animate-in="fly-in-left" animate-in-duration="0.25s" src="/img/WordmarkFuss.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
+          </div>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <amp-story-page id="page1">
+        <amp-story-grid-layer template="fill">
+          <div class="wordmark">
+            <amp-img id="wordmark1" src="/img/WordmarkTYP.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
+          </div>
+          <div class="wordmark">
+            <amp-img id="wordmark2" src="/img/WordmarkDrywall.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
+          </div>
+          <div class="wordmark">
+            <amp-img id="wordmark3" src="/img/WordmarkFuss.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
+          </div>
+        </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="fill">
+          <div class="wordmark">
+            <amp-img id="wordmark4" animate-in="fly-in-left" animate-in-duration="0.25s" src="/img/WordmarkArchitects.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
+          </div>
+        </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="fill">
+          <div class="wordmark">
+            <amp-img id="wordmark5" animate-in="fade-in" animate-in-delay="0.2s" animate-in-duration=".2s" src="/img/WordmarkBlue.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
+          </div>
+        </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="fill">
+          <div animate-in="fade-in" animate-in-delay="0.1s" animate-in-duration=".3s" animate-in-timing-function="ease-in">
+            <amp-img id="img1" src="/img/Stars.svg" animate-in="pan-right" animate-in-delay="0.1s" translate-x="260px" animate-in-duration="4s" animate-in-timing-function="ease-out" layout="responsive" width="4" height="3"></amp-img>
+          </div>
         </amp-story-grid-layer>
 
         <amp-story-page-attachment layout="nodisplay" data-title="New Homes" data-cta-text="New Homes">
@@ -282,11 +293,15 @@
 
     <amp-story-page id="page2">
       <amp-story-grid-layer template="fill">
+        <div>
           <amp-img id="img1" src="/img/Washington1.jpg" animate-in="pan-left" translate-x="160px" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="4504" height="3780"></amp-img>
+        </div>
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="fill" animate-in="fade-in" animate-in-duration="12s" animate-in-timing-function="ease-in-out">
-          <amp-img id="img2" src="/img/Washington2.jpg" animate-in="pan-left" translate-x="160px" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="4504" height="3780"></amp-img>
+      <amp-story-grid-layer template="fill">
+          <div animate-in="fade-in" animate-in-duration="12s" animate-in-timing-function="ease-in-out">
+            <amp-img id="img2" src="/img/Washington2.jpg" animate-in="pan-left" translate-x="160px" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="4504" height="3780"></amp-img>
+          </div>
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="thirds">
@@ -297,24 +312,30 @@
       </amp-story-grid-layer>
 
       <amp-story-page-attachment layout="nodisplay" data-title="Our Vision" data-cta-text="Our Vision">
-        <p>We need to build better, now. Climate change is happening and the building and construction sector has been producing too many emissions, pollutants, and waste for too long.</p>
-        <p>Embodied carbon emissions from the building sector produce 11% of annual global greenhouse gas emissions.</p>
-        <p>The goal is a net-zero carbon footprint with net-zero off-site energy and operating emissions. We are meeting and exceeding the standards set by the globally recognized leader in sustainable building, the International Living Future Institute. Every building we build will stand up to their two measures: Zero Energy certification and Zero Carbon certification. We also meet and exceed the criteria for the US Department of Energy’s Zero Energy Ready homes, and the US Environmental Protection Agency’s Energy Star Homes. We utilize Watersense program products, perform HERS tests to ensure a very airtight home (think energy efficient).
-        <br><br>We build homes that can last 500 years, so that all the energy we put in to the building, is fully utilized throughout its lifetime. As a Whole Site Life Cycle Assessment, we assess the carbon footprint of every material, including every foot it travels and every bit of energy in its production. We then balance the equation of your site + construction + your home, to give you a net-zero carbon footprint. We embrace on-site renewable energy like solar panels so that the all the energy you produce is all the energy your home needs to run.
-        <br><br>We build homes that reduce construction waste. We design to best utilize standard material dimensions, and our exterior and interior walls contain the fewest and most highly efficient layers possible. Our structural system allows the exterior shell to be completely independent from the interior walls, which also means that your home’s 500 year lifespan can easily have many iterations.
-        <br><br>We build homes that reduce pollutants and eliminate toxins. All of our building materials are certified by Declare Labels and are free from the Red List. We use formaldehyde-free and low/no-VOC products throughout your home, whether it’s something you’ll touch everyday or never see.
-        <br><br>We help people make their existing homes better. Whether it’s a warmer “winter jacket,” or better summer shading that you desire, an update to your energy-consuming appliances, or just some help with laying things out, we are happy to assist you with any project, large or small.</p>
+        <div class="textBox">
+          <p>We need to build better, now. Climate change is happening and the building and construction sector has been producing too many emissions, pollutants, and waste for too long.</p>
+          <p>Embodied carbon emissions from the building sector produce 11% of annual global greenhouse gas emissions.</p>
+          <p>The goal is a net-zero carbon footprint with net-zero off-site energy and operating emissions. We are meeting and exceeding the standards set by the globally recognized leader in sustainable building, the International Living Future Institute. Every building we build will stand up to their two measures: Zero Energy certification and Zero Carbon certification. We also meet and exceed the criteria for the US Department of Energy’s Zero Energy Ready homes, and the US Environmental Protection Agency’s Energy Star Homes. We utilize Watersense program products, perform HERS tests to ensure a very airtight home (think energy efficient).
+          <br><br>We build homes that can last 500 years, so that all the energy we put in to the building, is fully utilized throughout its lifetime. As a Whole Site Life Cycle Assessment, we assess the carbon footprint of every material, including every foot it travels and every bit of energy in its production. We then balance the equation of your site + construction + your home, to give you a net-zero carbon footprint. We embrace on-site renewable energy like solar panels so that the all the energy you produce is all the energy your home needs to run.
+          <br><br>We build homes that reduce construction waste. We design to best utilize standard material dimensions, and our exterior and interior walls contain the fewest and most highly efficient layers possible. Our structural system allows the exterior shell to be completely independent from the interior walls, which also means that your home’s 500 year lifespan can easily have many iterations.
+          <br><br>We build homes that reduce pollutants and eliminate toxins. All of our building materials are certified by Declare Labels and are free from the Red List. We use formaldehyde-free and low/no-VOC products throughout your home, whether it’s something you’ll touch everyday or never see.
+          <br><br>We help people make their existing homes better. Whether it’s a warmer “winter jacket,” or better summer shading that you desire, an update to your energy-consuming appliances, or just some help with laying things out, we are happy to assist you with any project, large or small.</p>
+        </div>
       </amp-story-page-attachment>
     </amp-story-page>
 
 
     <amp-story-page id="page3">
       <amp-story-grid-layer template="fill">
+        <div>
           <amp-img id="img4" src="/img/Cluff3.jpg" layout="responsive" width="2999" height="1906"></amp-img>
+        </div>
       </amp-story-grid-layer>
 
-      <amp-story-grid-layer template="fill" animate-in="fade-in" animate-in-duration="6s" animate-in-timing-function="ease-in-out">
+      <amp-story-grid-layer template="fill">
+        <div animate-in="fade-in" animate-in-duration="4s" animate-in-timing-function="ease-in-out">
           <amp-img id="img5" src="/img/Cluff2.jpg" layout="responsive" width="2999" height="1906"></amp-img>
+        </div>
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
@@ -325,14 +346,16 @@
 
       <amp-story-page-attachment layout="nodisplay" data-title="Architects, tend your planet." data-cta-text="About Us">
         <div class="textBox">
-          <p>We are architects working to build the leanest, most resilient spaces possible. We want to design and build by leading with a true priority: Climate Change. We acknowledge that the architectural and construction industries have done too little, too late, and we are doing our best to catch up to the needs of our planet.<br><br>
-            Both registered architects, with diverse design experience covering residential, hospitality, public, and landscape projects, we bring our full attention and passion to what we do. We enjoy all aspects of project design, merging our inclination to explore by hand on paper with a realistic understanding of the role of digital data and modeling. Together, we have developed a method of building homes that we think is the most energy, cost, and time-efficient on the market, while it also includes adaptability and flexibility for each occupant and environment.</p>
+          <p>Our home is Ellensburg, WA and we work throughout the US and Canada.<br><br>
+            Email us at <a href="mailto:hello@architectstyp.com?subject=typ&body=What are you looking to build?">hello@architectstyp.com</a>.<br>
+            Call us at <a href="tel:+15097313025">509 731 3025</a>.</p>
+          <p>We are architects working to build the leanest, most resilient spaces possible. We want to design and build by leading with a true priority: Climate Change. We acknowledge that the architectural and construction industries have done too little, too late, and we are doing our best to catch up to the needs of our planet.</p>
           <div class="flexBox">
-            <div class="side" interactive><a href="https://annelise.info" target="_blank">
+            <div class="side"><a href="https://annelise.info" target="_blank">
               <amp-img alt="Annelise Aldrich Outtake" class="imgBottom" src="/img/Annelise1.jpg" layout="responsive" width="4032" height="2858"></amp-img>
               <amp-img alt="Annelise Aldrich" class="imgTop" src="/img/Annelise2.jpg" layout="responsive" width="4032" height="2858"></amp-img>
             </a></div>
-            <div class="side" interactive><a href="http://mwkeller.com" target="_blank">
+            <div class="side"><a href="http://mwkeller.com" target="_blank">
               <amp-img alt="Mark Keller Outtake" class="imgBottom" src="/img/Mark1.jpg" layout="responsive" width="4032" height="2858"></amp-img>
               <amp-img alt="Mark Keller" class="imgTop" src="/img/Mark2.jpg" layout="responsive" width="4032" height="2858"></amp-img>
             </a></div>
@@ -347,6 +370,7 @@
               I feel a deep urgency to my work. The goal is to develop rapidly deployable, resilient, and affordable homes—with a little fun sprinkled in.
             </p>
           </div>
+          <p>Both registered architects, with diverse design experience covering residential, hospitality, public, and landscape projects, we bring our full attention and passion to what we do. We enjoy all aspects of project design, merging our inclination to explore by hand on paper with a realistic understanding of the role of digital data and modeling. Together, we have developed a method of building homes that we think is the most energy, cost, and time-efficient on the market, while it also includes adaptability and flexibility for each occupant and environment.</p>
         </div>
       </amp-story-page-attachment>
     </amp-story-page>
@@ -358,7 +382,7 @@
             {
               "provider": "email",
               "recipient": "hello@architectstyp.com",
-              "body": "What are you looking to build? Give us a call at 206 319 6915 or email us at hello@architectstyp.com.",
+              "body": "What are you looking to build? Give us a call at 509 731 3025 or email us at hello@architectstyp.com.",
               "subject": "typ."
             }
           ],
@@ -387,8 +411,8 @@
                   "url": "http://facebook.com"
                 },
                 {
-                  "text": "206 319 6915",
-                  "url": "tel:+12063196915"
+                  "text": "509 731 3025",
+                  "url": "tel:+15097313025"
                 }
               ]
             },
