@@ -202,22 +202,56 @@
 
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-  <script type="application/ld+json">{
-    "@context": "http://schema.org/",
+  <script type="application/ld+json">
+    {"@context": "https://schema.org",
     "@type": "ProfessionalService",
     "additionalType":"http://www.productontology.org/id/Architect",
+    "image": [
+      "https://architectstyp.com/img/PosterSquare.jpg",
+      "https://architectstyp.com/img/PosterLandscape.jpg",
+      "https://architectstyp.com/img/PosterWide.jpg"
+     ],
+     "logo":"https://architectstyp.com/img/Logo.jpg",
+    "@id": "https://architectstyp.com",
     "name": "Architects, typ.",
-    "description":"We are two architects working to build the leanest, healthiest, most resilient spaces possible. No drywall, no fuss. Tend your planet.",
-    // "logo":"https://bad.house/img/logo.png",
-    // "image": "https://bad.house/img/snippet.jpg",
+    "description":"We are two architects working to build the leanest, healthiest, most resilient spaces possible. No drywall, no fuss.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ellensburg",
+      "addressRegion": "WA",
+      "postalCode": "98926",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 46.995561,
+      "longitude": -120.547645
+    },
+    "url": "https://architectstyp.com",
     "email":"hello@architectstyp.com",
-    "telephone":"509 731 3025",
-    "url":"https://architectstyp.com"
-  }</script>
+    "telephone": "+15097313025",
+    "foundingDate": "2017-08-14",
+    "areaServed": ["US-CA","US","CA"],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <amp-story standalone title="Architects, typ." publisher="Architects, typ." supports-landscape publisher-logo-src="https://example.com/logo/1x1.png" poster-portrait-src="https://example.com/my-story/poster/3x4.jpg" poster-square-src="https://example.com/my-story/poster/1x1.jpg" poster-landscape-src="https://example.com/my-story/poster/4x3.jpg">
+  <amp-story standalone title="Architects, typ." publisher="Architects, typ." supports-landscape publisher-logo-src="/img/Logo.jpg" poster-portrait-src="/img/PosterPortrait.jpg" poster-square-src="/img/PosterSquare.jpg" poster-landscape-src="/img/PosterLandscape.jpg">
 
     <amp-story-page id="page0" auto-advance-after="2s"  >
         <amp-story-grid-layer template="fill">
@@ -327,15 +361,11 @@
 
     <amp-story-page id="page3">
       <amp-story-grid-layer template="fill">
-        <div>
           <amp-img id="img4" src="/img/Cluff3.jpg" layout="responsive" width="2999" height="1906"></amp-img>
-        </div>
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
-        <div animate-in="fade-in" animate-in-duration="4s" animate-in-timing-function="ease-in-out">
-          <amp-img id="img5" src="/img/Cluff2.jpg" layout="responsive" width="2999" height="1906"></amp-img>
-        </div>
+          <amp-img id="img5" src="/img/Cluff2.jpg" animate-in="fade-in" animate-in-duration="4s" animate-in-timing-function="ease-in-out" layout="responsive" width="2999" height="1906"></amp-img>
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
@@ -399,6 +429,19 @@
                   "url": "mailto:hello@architectstyp.com"
                 },
                 {
+                  "text": "Book a Meeting",
+                  "url": "https://forms.gle/GjjEVqXYcHPhMPRK7"
+                },
+                {
+                  "text": "509 731 3025",
+                  "url": "tel:+15097313025"
+                }
+              ]
+            },
+            {
+              "type": "cta-link",
+              "links": [
+                {
                   "text": "Instagram",
                   "url": "http://instagram.com"
                 },
@@ -411,8 +454,8 @@
                   "url": "http://facebook.com"
                 },
                 {
-                  "text": "509 731 3025",
-                  "url": "tel:+15097313025"
+                  "text": "Google",
+                  "url": "https://g.page/architectsTYP?share"
                 }
               ]
             },
