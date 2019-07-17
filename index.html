@@ -46,6 +46,14 @@
       q {
         quotes: "\201C" "\201D" "\2018" "\2019";
       }
+      sup, sub {
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
+      }
+      sub {
+        top: 0.4em;
+      }
       amp-story-page{
         background-color: #16161d;
       }
@@ -66,15 +74,6 @@
         margin:53vh auto 0 auto;
         max-width:26vw;
       }
-      h1{
-        font-family: 'Wavehaus', sans-serif;
-        margin: 0;
-        font-weight: normal;
-        font-size: 12vw;
-        line-height: 11vw;
-        text-align: right;
-        padding-right:36vw;
-      }
       h2{
         font-family: 'Wavehaus', sans-serif;
         margin: 0;
@@ -84,40 +83,59 @@
         text-align: center;
         padding-bottom:2.2vw;
       }
-      h3{
+      h4{
         font-family: 'Wavehaus', sans-serif;
-        margin: 0;
+        margin: 100px 0 50px 0;
         font-weight: normal;
-        font-size: 60px;
-        line-height: 50px;
-        text-align: center;
-        padding:70px 0 55px 0;
+        font-size:72px;
+        line-height:60px;
+        text-align:center;
+      }
+      h5{
+        font-family: 'Wavehaus', sans-serif;
+        margin: 0 0 50px 0;
+        font-weight: normal;
+        font-size:72px;
+        line-height:60px;
+        text-align:center;
       }
       h6{
         visibility: hidden;
       }
       .textBox{
-        padding: 0 25px 25px 25px;
+        padding: 0 40px 40px 40px;
       }
       p{
-        initial-letter: 2;
         font-size: 14px;
         text-align:justify;
-        margin-top: 25px;
+        margin-top: 40px;
+      }
+      .center{
+        text-align:center;
       }
       figcaption{
         font-size: 14px;
-        margin-top: 16px;
+        margin-top: 20px;
+      }
+      blockquote{
+        font-family: 'Wavehaus', sans-serif;
+        margin: 40px 0 0 0;
+        padding: 50px;
+        border-radius: 2.5px;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 42px;
+        text-align: center;
+        background: #f9f9f9;
       }
       .flexBox{
         display:flex;
-        margin:25px 0 0 0;
+        margin:40px 0 0 0;
       }
       .imageBox{
-        margin:40px 0 40px 0;
+        margin:60px 0 60px 0;
       }
       .inline{
-        margin:1px;
         border-radius: 2.5px;
       }
       .side{
@@ -141,7 +159,7 @@
       .columns{
         column-count:2;
         column-gap:25px;
-        margin-top:25px;
+        margin-top:40px;
       }
       .columns p{
         margin:0;
@@ -151,14 +169,13 @@
         font-size: 14px;
         margin-bottom:-10px;
       }
-      li{
-        }
+      .zoom{
+        visibility: hidden;
+      }
+      .pan{
+        visibility: visible;
+      }
       @media all and (orientation:landscape) {
-        h1 {
-           font-size: 12vh;
-           line-height: 11vh;
-           padding-right:38vw;
-        }
         h2 {
            font-size: 12vh;
            line-height: 11vh;
@@ -178,6 +195,12 @@
           margin-top:43.5vh;
           max-width:25vh;
         }
+        .zoom{
+          visibility: visible;
+        }
+        .pan{
+          visibility: hidden;
+        }
       }
       @media all and (min-width: 800px) {
         h6{
@@ -189,7 +212,7 @@
           padding: 0 30px 0 30px;
         }
         .textBox{
-          padding: 55px 80px 70px 80px;
+          padding: 60px 100px 80px 100px;
         }
         .flexBox{
           display:flex;
@@ -197,6 +220,9 @@
         }
         .columns{
           column-count:2;
+        }
+        blockquote{
+          padding: 70px;
         }
       }
   </style>
@@ -309,32 +335,35 @@
           <div class="textBox">
             <div class="imageBox">
               <a href="https://photos.app.goo.gl/iPoxJV8w8Tfj9Paz6" target="_blank">
+                <h5>⛆ Post-Coal</h5>
                 <amp-img class="inline" alt="Post-Coal Thumbnail" src="/img/Coal1_740.webp" srcset="/img/Coal1.webp 1480w" layout="responsive" width="1480" height="740">
                   <amp-img fallback class="inline" alt="Post-Coal Thumbnail" src="/img/Coal1_740.jpg" srcset="/img/Coal1.jpg 1480w" layout="responsive" width="1480" height="740">
                   </amp-img>
                 </amp-img>
               </a>
-              <figcaption><a href="https://photos.app.goo.gl/iPoxJV8w8Tfj9Paz6" target="_blank">Post-Coal</a> in Roslyn, WA<br>New 1,400 sf home, in schematic design<br>Post-frame, zero-carbon, and zero-energy</figcaption>
+              <figcaption>New 1,400 sf home in Roslyn, WA in schematic design<br>Post-frame, zero-carbon, and zero-energy</figcaption>
             </div>
 
             <div class="imageBox">
               <a href="https://photos.app.goo.gl/tvas6VN9yNa2g2hp6" target="_blank">
+                <h4>ↈ Mt. Tuam</h4>
                 <amp-img class="inline" alt="Mount Tuam Thumbnail" src="/img/Tuam1_740.webp" srcset="/img/Tuam1.webp 1480w" layout="responsive" width="1480" height="740">
                   <amp-img fallback class="inline" alt="Mount Tuam Thumbnail" src="/img/Tuam1_740.jpg" srcset="/img/Tuam1.jpg 1480w" layout="responsive" width="1480" height="740">
                   </amp-img>
                 </amp-img>
               </a>
-              <figcaption><a href="https://photos.app.goo.gl/tvas6VN9yNa2g2hp6" target="_blank">Mount Tuam</a> on Salt Spring Island, BC<br>New 4,460 sf home and 550 sf cottage, under construction<br>Post-frame with large window wall, using healthy materials and low-energy detailing</figcaption>
+              <figcaption>New 4,460 sf home and 550 sf cottage on Salt Spring Island, BC under construction<br>Post-frame with large window wall, using healthy materials and low-energy detailing</figcaption>
             </div>
 
             <div class="imageBox">
               <a href="https://photos.app.goo.gl/wHBJJRBc2MPvDBEc8" target="_blank">
+                <h4>∴ Old Cluff</h4>
                 <amp-img class="inline" alt="Old Cluff Thumbnail" src="/img/Cluff1_740.webp" srcset="/img/Cluff1.webp 1480w" layout="responsive" width="1480" height="740">
                   <amp-img fallback class="inline" alt="Old Cluff Thumbnail" src="/img/Cluff1_740.jpg" srcset="/img/Cluff1.jpg 1480w" layout="responsive" width="1480" height="740">
                   </amp-img>
                 </amp-img>
               </a>
-              <figcaption><a href="https://photos.app.goo.gl/wHBJJRBc2MPvDBEc8" target="_blank">Old Cluff</a> in Kennebunkport, ME<br>New 1,380 sf home, under construction<br>Advanced framing, using cost effective and passive techniques</figcaption>
+              <figcaption>New 1,380 sf home in Kennebunkport, ME under construction<br>Advanced framing, using cost effective and passive techniques</figcaption>
             </div>
 
             <p>Top three projects hot off the drafting boards ⤴<br><br>
@@ -348,7 +377,13 @@
 
     <amp-story-page id="page2">
       <amp-story-grid-layer template="fill">
-        <div>
+        <div class="zoom">
+          <amp-img id="img1" src="/img/Washington1_960.webp" srcset="/img/Washington1.webp 1920w" animate-in="zoom-out" scale-start="1.15" scale-end="1" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="1920" height="1611">
+            <amp-img fallback src="/img/Washington1_960.jpg" srcset="/img/Washington1.jpg 1920w" layout="responsive" width="1920" height="1611">
+            </amp-img>
+          </amp-img>
+        </div>
+        <div class="pan">
           <amp-img id="img1" src="/img/Washington1_960.webp" srcset="/img/Washington1.webp 1920w" animate-in="pan-left" translate-x="160px" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="1920" height="1611">
             <amp-img fallback src="/img/Washington1_960.jpg" srcset="/img/Washington1.jpg 1920w" layout="responsive" width="1920" height="1611">
             </amp-img>
@@ -357,7 +392,13 @@
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
-          <div animate-in="fade-in" animate-in-duration="12s" animate-in-timing-function="ease-in-out">
+          <div class="zoom" animate-in="fade-in" animate-in-duration="12s" animate-in-timing-function="ease-in-out">
+            <amp-img id="img2" src="/img/Washington2_960.webp" srcset="/img/Washington2.webp 1920w" animate-in="zoom-out" scale-start="1.15" scale-end="1" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="1920" height="1611">
+              <amp-img fallback src="/img/Washington2_960.jpg" srcset="/img/Washington2.jpg 1920w" layout="responsive" width="1920" height="1611">
+              </amp-img>
+            </amp-img>
+          </div>
+          <div class="pan" animate-in="fade-in" animate-in-duration="12s" animate-in-timing-function="ease-in-out">
             <amp-img id="img2" src="/img/Washington2_960.webp" srcset="/img/Washington2.webp 1920w" animate-in="pan-left" translate-x="160px" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="1920" height="1611">
               <amp-img fallback src="/img/Washington2_960.jpg" srcset="/img/Washington2.jpg 1920w" layout="responsive" width="1920" height="1611">
               </amp-img>
@@ -374,13 +415,22 @@
 
       <amp-story-page-attachment layout="nodisplay" data-title="Our Vision" data-cta-text="Our Vision">
         <div class="textBox">
-          <p>We need to build better, now. Climate change is happening and the building and construction sector has been producing too many emissions, pollutants, and waste for too long.</p>
-          <p>Embodied carbon emissions from the building sector produce 11% of annual global greenhouse gas emissions.</p>
-          <p>The goal is a net-zero carbon footprint with net-zero off-site energy and operating emissions. We are meeting and exceeding the standards set by the globally recognized leader in sustainable building, the International Living Future Institute. Every building we build will stand up to their two measures: Zero Energy certification and Zero Carbon certification. We also meet and exceed the criteria for the US Department of Energy’s Zero Energy Ready homes, and the US Environmental Protection Agency’s Energy Star Homes. We utilize Watersense program products, perform HERS tests to ensure a very airtight home (think energy efficient).
-          <br><br>We build homes that can last 500 years, so that all the energy we put in to the building, is fully utilized throughout its lifetime. As a Whole Site Life Cycle Assessment, we assess the carbon footprint of every material, including every foot it travels and every bit of energy in its production. We then balance the equation of your site + construction + your home, to give you a net-zero carbon footprint. We embrace on-site renewable energy like solar panels so that the all the energy you produce is all the energy your home needs to run.
-          <br><br>We build homes that reduce construction waste. We design to best utilize standard material dimensions, and our exterior and interior walls contain the fewest and most highly efficient layers possible. Our structural system allows the exterior shell to be completely independent from the interior walls, which also means that your home’s 500 year lifespan can easily have many iterations.
-          <br><br>We build homes that reduce pollutants and eliminate toxins. All of our building materials are certified by Declare Labels and are free from the Red List. We use formaldehyde-free and low/no-VOC products throughout your home, whether it’s something you’ll touch everyday or never see.
-          <br><br>We help people make their existing homes better. Whether it’s a warmer “winter jacket,” or better summer shading that you desire, an update to your energy-consuming appliances, or just some help with laying things out, we are happy to assist you with any project, large or small.</p>
+          <p>We need to build better, now. Embodied carbon emissions from the building sector produce 11% of annual global greenhouse gas emissions, while the average home is built to stand only 50 years before needing to be demolished and rebuilt.The building industry has been producing too many emissions, pollutants, and waste for too long.<br></p>
+          <p class="center"><br><br><br>We pledge to design every home:</p>
+          <h5>1. Lean</h5>
+          <p>to net zero energy use and net zero carbon footprint. We use more effective and efficient components to build your home, thereby increasing performance and reducing energy, pollution, waste, and costs, both in dollars and in CO2 emissions.</p>
+          <a href="https://www.worldgbc.org/sites/default/files/UNEP%20188_GABC_en%20%28web%29.pdf" target="blank"><blockquote cite="https://www.worldgbc.org/sites/default/files/UNEP%20188_GABC_en%20%28web%29.pdf">Buildings and construction account for more than 35% of global final energy use and nearly 40% of energy-related CO<sub>2</sub> emissions.</blockquote></a>
+          <p>We build homes that can last 3-4 times longer than typical construction. Think of a 200 year home. All the energy we put in to the building is fully utilized throughout its lifetime. As a Whole Site Life Cycle Assessment, we assess the carbon footprint of every material, including every foot it travels and every bit of energy in its production. We then balance the equation of your site + construction + your home, to give you a net-zero carbon footprint. We embrace on-site renewable energy like solar panels so that the all the energy you produce is all the energy your home needs to perform.</p>
+          <h4>2. Resilient</h4>
+          <p>to be affordable and long-lasting. It would take 400 Ponderosa Pines 50 years to offset one home’s carbon footprint. We make our homes last longer and use less carbon. They are high-quality, affordable, and rapidly built with local materials.</p>
+          <a href="https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references" target="blank"><blockquote cite="https://www.epa.gov/energy/greenhouse-gases-equivalencies-calculator-calculations-and-references">An average 50-year home has a footprint of over 400 metric tons of CO<sub>2</sub>.</blockquote></a>
+          <p>We build homes that reduce construction waste. We design to best utilize standard material dimensions, and our exterior and interior walls contain the fewest and most highly efficient layers possible. Our structural system allows the exterior shell to be completely independent from the interior walls, which also means that your home’s 200 year lifespan can easily have many iterations.</p>
+          <h4>3. Healthy</h4>
+          <p>free of toxins and pollutants. We ventilate our homes with fresh air. We offer healthier materials, finishes, and environments, both interior and exterior. We ensure that our homes are free from chemical and biological contaminants that plague typical construction, such as VOCs, combustion byproducts, bacteria and mold.</p>
+          <a href="https://www.osha.gov/dts/osta/otm/otm_iii/otm_iii_2.html" target="blank"><blockquote cite="https://www.osha.gov/dts/osta/otm/otm_iii/otm_iii_2.html">Inadequate ventilation is responsible for 52% of sick building syndrome cases.</blockquote></a>
+          <p>We build homes with high indoor air quality. We eliminate pollutants and toxins. All of our building materials are certified by <a href="https://living-future.org/declare/" target="_blank">Declare</a> labels and are free from the <a href="https://living-future.org/declare/declare-about/red-list/" target="_blank">Red List</a>. We use formaldehyde-free and low/no-VOC products throughout the home, whether it’s something you’ll touch everyday or never see. We ensure proper ventilation, both for your health and your home’s health, to eliminate chemical and biological contaminants. In the world of sustainable building techniques, there is an important balance between airtightness for energy performance, and ventilation for a healthy building. We understand these factors, and how to tune the building for optimum health.</p>
+          <p>We meet and exceed the standards set by the globally recognized leader in sustainable building, the <a href="https://living-future.org/" target="_blank">International Living Future Institute</a>. Every building we build stands up to their two measures: <a href="https://living-future.org/net-zero/" target="_blank">Zero Energy</a> certification and <a href="https://living-future.org/zero-carbon-certification/" target="_blank">Zero Carbon</a> certification. We also meet and exceed the criteria for the US Department of Energy’s <a href="https://zeroenergyproject.org/build/certifying-zero-energy-home-performance/" target="_blank">Zero Energy Ready</a> homes, and the US Environmental Protection Agency’s Energy Star Homes and Renewable Energy Ready Homes. We participate in the EPA’s <a href="https://www.epa.gov/indoorairplus" target="_blank">Indoor airPLUS</a> program, utilize <a href="https://www.epa.gov/watersense/watersense-products" target="_blank">Watersense</a> products, and perform <a href="https://www.hersindex.com/" target="_blank">HERS</a> rating tests to ensure a thermally airtight home.<br><br>
+          We help people make their existing homes better. Whether it’s a warmer “winter jacket,” or shadier “sun hat” that you desire, an update to your energy-consuming appliances, or just some help with laying things out, we are happy to assist you with any project, large or small.</p>
         </div>
       </amp-story-page-attachment>
     </amp-story-page>
@@ -388,17 +438,31 @@
 
     <amp-story-page id="page3">
       <amp-story-grid-layer template="fill">
-          <amp-img id="img4" src="/img/Cluff3_960.webp" srcset="/img/Cluff3.webp 1920w" layout="responsive" width="1920" height="1220">
+        <div class="zoom">
+          <amp-img id="img4" src="/img/Cluff3_960.webp" srcset="/img/Cluff3.webp 1920w" layout="responsive" width="1920" height="1220" animate-in="zoom-out" scale-start="1.15" scale-end="1" animate-in-duration="20s" animate-in-timing-function="ease-out">
             <amp-img fallback src="/img/Cluff3_960.jpg" srcset="/img/Cluff3.jpg 1920w" layout="responsive" width="1920" height="1220">
             </amp-img>
           </amp-img>
+        </div>
+
+        <amp-img class="pan" src="/img/Cluff3_960.webp" srcset="/img/Cluff3.webp 1920w" layout="responsive" width="1920" height="1220">
+          <amp-img fallback src="/img/Cluff3_960.jpg" srcset="/img/Cluff3.jpg 1920w" layout="responsive" width="1920" height="1220">
+          </amp-img>
+        </amp-img>
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
-          <amp-img id="img5" src="/img/Cluff2_960.webp" srcset="/img/Cluff2.webp 1920w" animate-in="fade-in" animate-in-duration="4s" animate-in-timing-function="ease-in-out" layout="responsive" width="1920" height="1220">
+        <div class="zoom" animate-in="fade-in" animate-in-duration="4s" animate-in-timing-function="ease-in-out">
+          <amp-img id="img5" src="/img/Cluff2_960.webp" srcset="/img/Cluff2.webp 1920w" animate-in="zoom-out" scale-start="1.15" scale-end="1" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="1920" height="1220">
             <amp-img fallback src="/img/Cluff2_960.jpg" srcset="/img/Cluff2.jpg 1920w" layout="responsive" width="1920" height="1220">
             </amp-img>
           </amp-img>
+        </div>
+
+        <amp-img class="pan" src="/img/Cluff2_960.webp" srcset="/img/Cluff2.webp 1920w" layout="responsive" width="1920" height="1220" animate-in="fade-in" animate-in-duration="4s" animate-in-timing-function="ease-in-out">
+          <amp-img fallback src="/img/Cluff2_960.jpg" srcset="/img/Cluff2.jpg 1920w" layout="responsive" width="1920" height="1220">
+          </amp-img>
+        </amp-img>
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
@@ -445,7 +509,8 @@
               I feel a deep urgency to my work. The goal is to develop rapidly deployable, resilient, and affordable homes—with a little fun sprinkled in.
             </p>
           </div>
-          <p>Both registered architects, with diverse design experience covering residential, hospitality, public, and landscape projects, we bring our full attention and passion to what we do. We enjoy all aspects of project design, merging our inclination to explore by hand on paper with a realistic understanding of the role of digital data and modeling. Together, we have developed a method of building homes that we think is the most energy, cost, and time-efficient on the market, while it also includes adaptability and flexibility for each occupant and environment.</p>
+          <p>Both registered architects with diverse design experience covering residential, hospitality, public, and landscape projects, we bring our full attention and passion to what we do. We enjoy all aspects of project design, while we merge our inclination to explore by hand on paper with a realistic understanding of the role of digital data and modeling. Together, we have developed a method of building homes that we think is the most energy, cost, and time-efficient on the market, while also being adaptable and flexible for each occupant and environment.<br><br>
+          Our firm is committed to the 2030 Challenge and the Living Future Challenge. We utilize life-cycle assessment tools and building & energy modeling to meet multiple green certification performance targets, including metrics set by the US Environmental Protection Agency, the US Department of Energy, and the International Living Future Institute.</p>
         </div>
       </amp-story-page-attachment>
     </amp-story-page>
