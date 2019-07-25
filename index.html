@@ -5,6 +5,7 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
   <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <title>TYP: Architects, tend your planet.</title>
   <link rel="canonical" href="https://architectstyp.com">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -283,6 +284,19 @@
 </head>
 
 <body>
+  <amp-analytics type="gtag" data-credentials="include">
+    <script type="application/json">
+    {
+      "vars" : {
+        "gtag_id": "199160084",
+        "config" : {
+          "199160084": { "groups": "default" }
+        }
+      }
+    }
+    </script>
+  </amp-analytics>
+
   <amp-story standalone title="Architects, typ." publisher="Architects, typ." supports-landscape publisher-logo-src="/img/Logo.jpg" poster-portrait-src="/img/PosterPortrait.jpg" poster-square-src="/img/PosterSquare.jpg" poster-landscape-src="/img/PosterLandscape.jpg">
 
     <amp-story-page id="page1">
