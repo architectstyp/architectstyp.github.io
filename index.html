@@ -5,11 +5,9 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
   <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
-  <title>Architects TYP</title>
+<script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+  <title>Architects, typ.</title>
   <link rel="canonical" href="https://architectstyp.com">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="description" content="Net-zero homes need to be affordable, healthy, and last 200+ years. Check out our work.">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -169,12 +167,26 @@
         font-size: 14px;
         margin-bottom:-10px;
       }
-      .zoom{
-        visibility: hidden;
+      .coverContainer{
+          width:100%;
+          height:100%;
+          position:absolute;
+          top:0;
+          left:0;
       }
-      .pan{
-        visibility: visible;
+      amp-img.cover img{
+          object-fit:cover;
       }
+
+      .video amp-video{
+           pointer-events: none;
+      }
+      
+      amp-video.cover video{
+          object-fit: cover;
+      }
+
+      
       @media all and (orientation:landscape) {
         h2 {
            font-size: 12vh;
@@ -194,12 +206,6 @@
         .logo{
           margin-top:43.5vh;
           max-width:25vh;
-        }
-        .zoom{
-          visibility: visible;
-        }
-        .pan{
-          visibility: hidden;
         }
       }
       @media all and (min-width: 800px) {
@@ -285,9 +291,9 @@
 </head>
 
 <body>
-  <amp-story standalone title="TYP Architects" publisher="TYP Architects" supports-landscape publisher-logo-src="/img/Logo.jpg" poster-portrait-src="/img/PosterPortrait.jpg" poster-square-src="/img/PosterSquare.jpg" poster-landscape-src="/img/PosterLandscape.jpg">
+  <amp-story standalone title="typ" publisher="typ" supports-landscape publisher-logo-src="/img/Logo.jpg" poster-portrait-src="/img/PosterPortrait.jpg" poster-square-src="/img/PosterSquare.jpg" poster-landscape-src="/img/PosterLandscape.jpg">
 
-    <amp-story-page id="page1" auto-advance-after="2.8s">
+<amp-story-page id="page1" auto-advance-after="2.8s">
         <amp-story-grid-layer template="fill">
           <div class="wordmark">
             <amp-img id="wordmark1" src="/img/WordmarkTYP.svg" width="4.96" height="0.78" layout="responsive"></amp-img>
@@ -325,58 +331,26 @@
         </amp-story-grid-layer>
     </amp-story-page>
 
-
-    <amp-story-page id="page2">
+      
+<amp-story-page id="page2">
+       
       <amp-story-grid-layer template="fill">
-        <div class="zoom">
-          <amp-img id="img1b" src="/img/WA2_960.webp" srcset="/img/WA2.webp 1920w" animate-in="zoom-out" scale-start="1.15" scale-end="1" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="1920" height="1920">
-            <amp-img fallback src="/img/WA2_960.jpg" srcset="/img/WA2.jpg 1920w" layout="responsive" width="1920" height="1920">
-            </amp-img>
-          </amp-img>
-        </div>
-        <div class="pan">
-          <amp-img id="img1a" src="/img/WA2_960.webp" srcset="/img/WA2.webp 1920w" animate-in="pan-left" translate-x="160px" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="1920" height="1920">
-            <amp-img fallback src="/img/WA2_960.jpg" srcset="/img/WA2.jpg 1920w" layout="responsive" width="1920" height="1920">
-            </amp-img>
-          </amp-img>
-        </div>
+          <div class="coverContainer">
+            <amp-video class="cover" autoplay loop layout="fill" width="16" height="9" poster="img/EdgeWaterSplash.jpg"> <source src="img/EdgeWater.webm" type="video/webm" /> <source src="img/EdgeWater.mp4" type="video/mp4" /> <div fallback><p>This browser does not support the video element.</p> </div>></amp-video>
+             </div>
       </amp-story-grid-layer>
-
-      <amp-story-grid-layer template="fill">
-          <div class="zoom" animate-in="fade-in" animate-in-duration="5s" animate-in-timing-function="ease-in-out">
-            <amp-img id="img2" src="/img/WA1_960.webp" srcset="/img/WA1.webp 1920w" animate-in="zoom-out" scale-start="1.15" scale-end="1" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="1920" height="1920">
-              <amp-img fallback src="/img/WA1_960.jpg" srcset="/img/WA1.jpg 1920w" layout="responsive" width="1920" height="1920">
-              </amp-img>
-            </amp-img>
-          </div>
-          <div class="pan" animate-in="fade-in" animate-in-duration="5s" animate-in-timing-function="ease-in-out">
-            <amp-img id="img2a" src="/img/WA1_960.webp" srcset="/img/WA1.webp 1920w" animate-in="pan-left" translate-x="160px" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="responsive" width="1920" height="1920">
-              <amp-img fallback src="/img/WA1_960.jpg" srcset="/img/WA1.jpg 1920w" layout="responsive" width="1920" height="1920">
-              </amp-img>
-            </amp-img>
-          </div>
-      </amp-story-grid-layer>
-
-      <amp-story-grid-layer template="thirds">
+       
+             <amp-story-grid-layer template="thirds">
         <div grid-area="middle-third" class="middle">
-          <h2>Zero Carbon</h2>
-          <h6>Every joule of energy put into these buildings is meaningful and offset.<br>We study the Whole Site Life Cycle Assessment to make our buildings efficient, from start to forever.</h6>
+          <h2>EdgeWater</h2>
+          <h6>Two new homes, one AADU, and one DADU in Seattle, WA<br>All tight-frame and all zero-energy</h6>
         </div>
       </amp-story-grid-layer>
-
-      <amp-story-page-attachment layout="nodisplay" data-title="New Homes" data-cta-text="New Homes">
+       
+    
+       <amp-story-page-attachment layout="nodisplay" data-title="More" data-cta-text="More">
         <div class="textBox">
-          <div class="imageBox">
-            <a href="https://photos.app.goo.gl/vWTRhZs958ivbwY36" target="_blank">
-              <h5>⌮ Post-Coal</h5>
-              <amp-img class="inline" alt="Post-Coal Thumbnail" src="/img/Coal2_740.webp" srcset="/img/Coal2.webp 1480w" layout="responsive" width="1480" height="740">
-                <amp-img fallback class="inline" alt="Post-Coal Thumbnail" src="/img/Coal2_740.jpg" srcset="/img/Coal2.jpg 1480w" layout="responsive" width="1480" height="740">
-                </amp-img>
-              </amp-img>
-            </a>
-            <figcaption>New 1,400 sf home in Roslyn, WA in permit documents<br>Tight-frame, zero-carbon, and zero-energy</figcaption>
-          </div>
-			
+		
 		<div class="imageBox">
             <a href="https://photos.app.goo.gl/dj5rGETiDbjujVmw6" target="_blank">
               <h5>☉ EdgeWater</h5>
@@ -387,8 +361,65 @@
             </a>
             <figcaption>Two new homes, one AADU, and one DADU in Seattle, WA in permit documents<br>Tight-frame and all zero-energy</figcaption>
           </div>
-
+        </div>
+      </amp-story-page-attachment>
+  </amp-story-page>
+ 
+      
+<amp-story-page id="page3">
+       
+      <amp-story-grid-layer template="fill">
+          <div class="coverContainer">
+            <amp-video class="cover" autoplay loop layout="fill" width="16" height="9" poster="img/CoalSplash.jpg"> <source src="img/Coal.webm" type="video/webm" /> <source src="img/Coal.mp4" type="video/mp4" /> <div fallback><p>This browser does not support the video element.</p> </div>></amp-video>
+             </div>
+      </amp-story-grid-layer>
+       
+             <amp-story-grid-layer template="thirds">
+        <div grid-area="middle-third" class="middle">
+          <h2>Post-Coal</h2>
+          <h6>New 1,400 sf home in Roslyn, WA<br>Tight-frame, zero-carbon, and zero-energy</h6>
+        </div>
+      </amp-story-grid-layer>
+       
+    
+       <amp-story-page-attachment layout="nodisplay" data-title="More" data-cta-text="More">
+        <div class="textBox">
+		
           <div class="imageBox">
+            <a href="https://photos.app.goo.gl/vWTRhZs958ivbwY36" target="_blank">
+              <h5>⌮ Post-Coal</h5>
+              <amp-img class="inline" alt="Post-Coal Thumbnail" src="/img/Coal2_740.webp" srcset="/img/Coal2.webp 1480w" layout="responsive" width="1480" height="740">
+                <amp-img fallback class="inline" alt="Post-Coal Thumbnail" src="/img/Coal2_740.jpg" srcset="/img/Coal2.jpg 1480w" layout="responsive" width="1480" height="740">
+                </amp-img>
+              </amp-img>
+            </a>
+            <figcaption>New 1,400 sf home in Roslyn, WA in permit documents<br>Tight-frame, zero-carbon, and zero-energy</figcaption>
+          </div>
+           </div>
+      </amp-story-page-attachment>
+  </amp-story-page>
+      
+      
+<amp-story-page id="page4">
+       
+      <amp-story-grid-layer template="fill">
+          <div class="coverContainer">
+            <amp-video class="cover" autoplay loop layout="fill" width="16" height="9" poster="img/TuamSplash.jpg"> <source src="img/Tuam.webm" type="video/webm" /> <source src="img/Tuam.mp4" type="video/mp4" /> <div fallback><p>This browser does not support the video element.</p> </div>></amp-video>
+             </div>
+      </amp-story-grid-layer>
+       
+             <amp-story-grid-layer template="thirds">
+        <div grid-area="middle-third" class="middle">
+          <h2>Mt. Tuam</h2>
+          <h6>New 4,460 sf home and 550 sf cottage on Salt Spring Island, BC<br>Post-frame using healthy materials and low-energy detailing</h6>
+        </div>
+      </amp-story-grid-layer>
+       
+    
+       <amp-story-page-attachment layout="nodisplay" data-title="More" data-cta-text="More">
+        <div class="textBox">
+		
+        <div class="imageBox">
             <a href="https://photos.app.goo.gl/LVKHMezh7dgWHq3C7" target="_blank">
               <h4>ↈ Mt. Tuam</h4>
               <amp-img class="inline" alt="Mt. Tuam Thumbnail" src="/img/Tuam1_740.webp" srcset="/img/Tuam1.webp 1480w" layout="responsive" width="1480" height="740">
@@ -398,7 +429,36 @@
             </a>
             <figcaption>New 4,460 sf home and 550 sf cottage on Salt Spring Island, BC under construction<br>Post-frame with large window wall, using healthy materials and low-energy detailing</figcaption>
           </div>
+           </div>
+      </amp-story-page-attachment>
+  </amp-story-page>
+      
+     
+<amp-story-page id="page5">
+      <amp-story-grid-layer template="fill">
+        <amp-img class="cover" src="/img/Cluff3_960.webp" srcset="/img/Cluff3.webp 1920w" layout="fill" width="1920" height="1220">
+          <amp-img fallback class="cover" src="/img/Cluff3_960.jpg" srcset="/img/Cluff3.jpg 1920w" layout="fill" width="1920" height="1220">
+          </amp-img>
+        </amp-img>
+      </amp-story-grid-layer>
 
+      <amp-story-grid-layer template="fill">
+        <amp-img class="cover" src="/img/Cluff2_960.webp" srcset="/img/Cluff2.webp 1920w" layout="fill" width="1920" height="1220" animate-in="fade-in" animate-in-duration="4s" animate-in-timing-function="ease-in-out">
+          <amp-img fallback class="cover" src="/img/Cluff2_960.jpg" srcset="/img/Cluff2.jpg 1920w" layout="fill" width="1920" height="1220">
+          </amp-img>
+        </amp-img>
+      </amp-story-grid-layer>
+
+             <amp-story-grid-layer template="thirds">
+        <div grid-area="middle-third" class="middle">
+          <h2>Old Cluff</h2>
+          <h6>New 1,380 sf home in Kennebunkport, ME<br>Advanced framing, with lean and passive techniques</h6>
+        </div>
+      </amp-story-grid-layer>
+     
+        <amp-story-page-attachment layout="nodisplay" data-title="More" data-cta-text="More">
+        <div class="textBox">
+		
           <div class="imageBox">
             <a href="https://photos.app.goo.gl/eQxUdB3czEXjuTyv7" target="_blank">
               <h4>∴ Old Cluff</h4>
@@ -407,41 +467,30 @@
                 </amp-img>
               </amp-img>
             </a>
-            <figcaption>New 1,380 sf home in Kennebunkport, ME under construction<br>Advanced framing, using cost-effective and passive techniques</figcaption>
+            <figcaption>New 1,380 sf home in Kennebunkport, ME under construction<br>Advanced framing, with lean and passive techniques</figcaption>
           </div>
-            
-        <div class="imageBox">
-            <a href="https://photos.app.goo.gl/kCsXzNoUP1noQtvc7" target="_blank">
-              <h4>☇ Craig's Hill</h4>
-              <amp-img class="inline" alt="Craig's Hill Thumbnail" src="/img/Craig1_740.webp" srcset="/img/Craig1.webp 1480w" layout="responsive" width="1480" height="740">
-                <amp-img fallback class="inline" alt="Craig's Hill Thumbnail" src="/img/Craig1_740.jpg" srcset="/img/Craig1.jpg 1480w" layout="responsive" width="1480" height="740">
-                </amp-img>
-              </amp-img>
-            </a>
-            <figcaption>Renovation in Ellensburg, WA in pricing<br>Simple and elegant space configuration, efficient envelope</figcaption>
-          </div>
-
-          <p>Top five projects hot off the drafting boards ⤴<br>
-            For a deeper look at our work, see our personal bios.<br><br>
-            We also help people make their existing homes better. Whether it’s a warmer “winter jacket,” or shadier “sun hat” that you desire, an update to your energy-consuming appliances, or just some help with laying things out, <a href="mailto:hello@typ.works?subject=typ&body=What are you looking to build?">we want to hear about your next project</a>.</p>
-        </div>
+            </div>
       </amp-story-page-attachment>
     </amp-story-page>
-
-
-    <amp-story-page id="page3">
+      
+      
+<amp-story-page id="page6">
       <amp-story-grid-layer template="fill">
-        <amp-img src="/img/Cluff3_960.webp" srcset="/img/Cluff3.webp 1920w" layout="responsive" width="1920" height="1220">
-          <amp-img fallback src="/img/Cluff3_960.jpg" srcset="/img/Cluff3.jpg 1920w" layout="responsive" width="1920" height="1220">
+          <amp-img class="cover" id="img1b" src="/img/WA2_960.webp" srcset="/img/WA2.webp 1920w" animate-in="zoom-out" scale-start="1.15" scale-end="1" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="fill" width="1920" height="1920">
+            <amp-img fallback class="cover" src="/img/WA2_960.jpg" srcset="/img/WA2.jpg 1920w" layout="fill" width="1920" height="1920">
+            </amp-img>
           </amp-img>
-        </amp-img>
+
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
-        <amp-img src="/img/Cluff2_960.webp" srcset="/img/Cluff2.webp 1920w" layout="responsive" width="1920" height="1220" animate-in="fade-in" animate-in-duration="4s" animate-in-timing-function="ease-in-out">
-          <amp-img fallback src="/img/Cluff2_960.jpg" srcset="/img/Cluff2.jpg 1920w" layout="responsive" width="1920" height="1220">
-          </amp-img>
-        </amp-img>
+          <div animate-in="fade-in" animate-in-duration="4s" animate-in-timing-function="ease-in">
+            <amp-img class="cover" id="img2" src="/img/WA1_960.webp" srcset="/img/WA1.webp 1920w" animate-in="zoom-out" scale-start="1.15" scale-end="1" animate-in-duration="20s" animate-in-timing-function="ease-out" layout="fill" width="1920" height="1920">
+              <amp-img fallback class="cover" src="/img/WA1_960.jpg" srcset="/img/WA1.jpg 1920w" layout="fill" width="1920" height="1920">
+              </amp-img>
+            </amp-img>
+          </div>
+
       </amp-story-grid-layer>
 
       <amp-story-grid-layer template="fill">
@@ -450,7 +499,7 @@
         </div>
       </amp-story-grid-layer>
 
-      <amp-story-page-attachment layout="nodisplay" data-title="Our Vision" data-cta-text="Our Vision">
+      <amp-story-page-attachment layout="nodisplay" data-title="    Vision" data-cta-text="Vision">
         <div class="textBox">
           <p>We are architects, <a href="https://g.page/architectsTYP?share" target="_blank">typ.</a><br>We need to build better, now.<br><br><br>The building sector consumes nearly <a href="https://www.awc.org/pdf/education/gb/ReThinkMag-GB500A-EvaluatingCarbonFootprint-1511.pdf" target="_blank">half of all energy</a> produced in the United States, while <a href="https://zeroenergyproject.org/2018/10/04/dont-buy-a-new-home-that-sucks/" target="_blank">23% of new homes have defective windows and doors, 21% have roof issues, and 18% have inadequate framing</a>.<br></p>
           <p class="center"><br><br><br>We pledge to design every home:</p>
@@ -477,7 +526,8 @@
       </amp-story-page-attachment>
     </amp-story-page>
 
-    <amp-story-bookend layout="nodisplay">
+
+<amp-story-bookend layout="nodisplay">
       <script type="application/json">{
           "bookendVersion": "v1.0",
           "shareProviders": [
