@@ -180,6 +180,9 @@
           top:0;
           left:0;
       }
+      .coverInner amp-video{
+          object-fit:cover;
+      }
       amp-img.cover img{
           object-fit:cover;
       }
@@ -188,14 +191,7 @@
            pointer-events: none;
       }
       
-      amp-video.cover video{
-          object-fit: cover;
-      }
-      
-     amp-youtube.cover video{
-          object-fit: cover;
-      }
-    amp-youtube.cover{
+    amp-youtube{
           object-fit: cover;
       }
      amp-youtube.cover amp-youtube{
@@ -745,9 +741,9 @@
 <amp-story-page id="DADU 206b">
       <amp-story-grid-layer template="fill">
       <div class="coverContainer">
+          <div class="coverInner"
           <amp-youtube
-                  class="cover"
-                             data-videoid="kvtO5trJWb0"
+                data-videoid="kvtO5trJWb0"
                   layout="fill"
                   width="1920"
                   height="1080"
@@ -755,10 +751,10 @@
                 loop
                              data-param-controls="0"
                              data-param-modestbranding="1"
-                             data-param-playsinline="0"
+                             data-param-playsinline="1"
                        data-param-rel="0"
                        data-param-disablekb="1"
-                ></amp-youtube>
+          ></amp-youtube></div>
         </div>
     </amp-story-grid-layer>
     </amp-story-page>
