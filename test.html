@@ -7,6 +7,7 @@
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
 
   <title>typ. | Architects</title>
   <link rel="canonical" href="https://typ.works">
@@ -202,6 +203,18 @@
            transform: translate(-50%, -50%);
           pointer-events: none;
       }
+      
+        .coverContainer amp-vimeo{
+           width: 100vw;
+           height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+           min-height: 100vh;
+           min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+          pointer-events: none;
+      }
       amp-img.cover img{
           object-fit:cover;
       }
@@ -342,6 +355,32 @@
        
   </amp-story-page>
        
+<amp-story-page id="Test2">
+       
+      <amp-story-grid-layer template="fill">
+          <div class="coverContainer">
+            
+                <amp-vimeo
+                data-videoid="68430204"
+                layout="fill"
+                width="1920"
+                height="1080"
+                autoplay
+                >
+                </amp-vimeo>
+            
+        </div>
+      </amp-story-grid-layer>
+       
+      <amp-story-grid-layer template="thirds">
+        <div grid-area="middle-third" class="middle">
+          <h2>Mt. Tuam</h2>
+          <h6>New 3,200 sf home and 500 sf cottage on Salt Spring Island, BC<br>Tight-frame using healthy materials and low-energy detailing</h6>
+        </div>
+      </amp-story-grid-layer>
+       
+  </amp-story-page>
+      
 <amp-story-page id="Mt. Tuam">
        
       <amp-story-grid-layer template="fill">
