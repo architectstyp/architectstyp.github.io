@@ -171,18 +171,17 @@
         margin-bottom:-10px;
       }
       .coverContainer{
-          width:100vw;
-          height:100vh;
-          position:relative;
-          overflow:hidden;
+           position: fixed;
+          top: 0; right: 0; bottom: 0; left: 0;
+          z-index: -99;
       }
-      .coverContainer amp-youtube{
-        position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 100vw;
-          height: 100vh;
-          transform: translate(-50%, -50%);
+      .cover, .coverContainer amp-youtube{
+         position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
       }
       amp-img.cover img{
           object-fit:cover;
@@ -191,17 +190,11 @@
            pointer-events: none;
       }
 
-     @media (min-aspect-ratio: 16/9) {
-  .coverContainer amp-youtube {
-    /* height = 100 * (9 / 16) = 56.25 */
-    height: 56.25vw;
-  }
-} 
-      @media (max-aspect-ratio: 16/9) {
-  .coverContainer amp-youtube {
-    /* width = 100 / (9 / 16) = 177.777777 */
-    width: 177.78vh;
-  }
+@media (min-aspect-ratio: 16/9) {
+  .cover { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .cover { width: 300%; left: -100%; }
 }
       @media all and (orientation:landscape) {
         h2 {
@@ -310,22 +303,24 @@
        
       <amp-story-grid-layer template="fill">
           <div class="coverContainer">
-              <amp-youtube
-              data-videoid="QCvQOW7m6AU"
-              autoplay
-                loop
-            layout="fill"
-              width="16"
-              height="9"
-            data-param-controls="0"
-            >
-            <amp-img
-                src="img/Tuam10.jpg"
-                placeholder
+            <div class="cover">
+                  <amp-youtube
+                  data-videoid="09UWxFzvyhs"
+                  autoplay
+                    loop
                 layout="fill"
-              />
-              </amp-youtube>
-             </div>
+                  width="16"
+                  height="9"
+                data-param-controls="0"
+                >
+                <amp-img
+                    src="img/Tuam10.jpg"
+                    placeholder
+                    layout="fill"
+                  />
+                  </amp-youtube>
+            </div>
+        </div>
       </amp-story-grid-layer>
        
       <amp-story-grid-layer template="thirds">
