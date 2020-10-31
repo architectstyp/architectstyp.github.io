@@ -171,17 +171,21 @@
         margin-bottom:-10px;
       }
       .coverContainer{
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        padding-top: 25px;
-        height: 0;
-      }
-      .coverContainer amp-youtube, amp-youtube{
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      amp-youtube{
+         width: 100%;
+      height: 100%; 
       }
       amp-img.cover img{
           object-fit:cover;
@@ -299,7 +303,7 @@
                 data-videoid="09UWxFzvyhs"
                 autoplay
                 loop
-                layout="fill"
+                layout="responsive"
                 width="1920"
                 height="1080"
                 data-param-controls="0"
