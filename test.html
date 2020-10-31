@@ -177,12 +177,8 @@
           overflow:hidden;
       }
       .coverContainer amp-youtube{
-        position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 100vw;
-          height: 100vh;
-          transform: translate(-50%, -50%);
+        position:relative;
+          object-fit: cover;
       }
       amp-img.cover img{
           object-fit:cover;
@@ -318,7 +314,13 @@
               width="16"
               height="9"
             data-param-controls="0"
-            ></amp-youtube>
+            >
+            <amp-img
+                src="img/Tuam10.jpg"
+                placeholder
+                layout="fill"
+              />
+              </amp-youtube>
              </div>
       </amp-story-grid-layer>
        
