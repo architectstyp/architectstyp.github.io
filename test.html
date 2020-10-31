@@ -171,18 +171,21 @@
         margin-bottom:-10px;
       }
       .coverContainer{
-          width:100vw;
-          height:100vh;
-          position:relative;
-          overflow:hidden;
+           position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
       }
       .coverContainer amp-youtube{
-            position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 100vw;
-          height: 100vh;
-          transform: translate(-50%, -50%);
+       width: 100%;
+  height: 100%; 
       }
       amp-img.cover img{
           object-fit:cover;
@@ -191,18 +194,7 @@
            pointer-events: none;
       }
 
-     @media (min-aspect-ratio: 16/9) {
-  .coverContainer amp-youtube {
-    /* height = 100 * (9 / 16) = 56.25 */
-    height: 56.25vw;
-  }
-} 
-      @media (max-aspect-ratio: 16/9) {
-  .coverContainer amp-youtube {
-    /* width = 100 / (9 / 16) = 177.777777 */
-    width: 177.78vh;
-  }
-}
+
       @media all and (orientation:landscape) {
         h2 {
            font-size: 12vh;
