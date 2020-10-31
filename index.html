@@ -6,7 +6,6 @@
     <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
     <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   <title>typ. | Architects</title>
   <link rel="canonical" href="https://typ.works">
   <link rel="manifest" href="/site.webmanifest">
@@ -169,39 +168,23 @@
         font-size: 14px;
         margin-bottom:-10px;
       }
-      .coverContainer {
-        position: absolute;
-          top:0;
-          left:0;
+      .coverContainer{
           width:100%;
           height:100%;
-      }
-      
-      .coverContainer amp-youtube {
-          margin: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          pointer-events:none;
-         width: 100vw;
-           height: 177.77vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-           min-height: 100vh;
-           min-width: 56.25vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-        transform: translate(-50%, -50%);
+          position:absolute;
+          top:0;
+          left:0;
       }
       amp-img.cover img{
           object-fit:cover;
       }
+      .video amp-video{
+           pointer-events: none;
+      }
 
       
-      @media (orientation:landscape) {
-        .coverContainer amp-youtube{          
-            width: 100vw;
-           height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-           min-height: 100vh;
-           min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
-      }
-          h2 {
+      @media all and (orientation:landscape) {
+        h2 {
            font-size: 12vh;
            line-height: 11vh;
            padding-bottom:2.2vh;
@@ -216,7 +199,7 @@
           max-height:25vw;
         }
       }
-      @media (min-width: 800px) {
+      @media all and (min-width: 800px) {
         h4{
           font-size:72px;
         }
@@ -307,39 +290,7 @@
        
       <amp-story-grid-layer template="fill">
           <div class="coverContainer">
-            <amp-youtube
-                media="(orientation:portrait)"
-                data-videoid="z1cJb5BmDS8"
-                autoplay
-                loop
-                layout="responsive"
-                width="9"
-                height="16"
-                data-param-controls="0"
-                data-param-modestbranding="1"
-                data-param-rel="0"
-                data-param-fs="0"
-                data-param-disablekb="1"
-                data-param-showinfo="0"
-                >
-                </amp-youtube>
-              
-                <amp-youtube
-                media="(orientation:landscape)"
-                data-videoid="09UWxFzvyhs"
-                autoplay
-                loop
-                layout="responsive"
-                width="16"
-                height="9"
-                data-param-controls="0"
-                data-param-modestbranding="1"
-                data-param-rel="0"
-                data-param-fs="0"
-                data-param-disablekb="1"
-                 data-param-showinfo="0"
-                >
-                </amp-youtube>
+            <amp-video class="cover" autoplay loop layout="fill" width="16" height="9" poster="img/Tuam8.jpg"> <source src="img/Tuam2.webm" type="video/webm" /> <source src="img/Tuam2.mp4" type="video/mp4" /> <div fallback><p>This browser does not support the video element.</p> </div> </amp-video>
              </div>
       </amp-story-grid-layer>
        
