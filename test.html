@@ -183,16 +183,17 @@
           object-fit:cover;
       }
 
-
+      @media (orientation:portrait){
+        .coverContainer amp-youtube {
+           transform: translateX(-30%);
+          }
+      }
       @media all and (orientation:landscape) {
         h2 {
            font-size: 12vh;
            line-height: 11vh;
            padding-bottom:2.2vh;
         }
-        .coverContainer amp-youtube {
-           transform: translateX(-50%);
-      }
         .middle{
           padding-top:6vh;
         }
