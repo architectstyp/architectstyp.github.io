@@ -173,8 +173,6 @@
       .coverContainer {
            width: 100vw;
            height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
-           min-height: 100vh;
-           min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
            margin:auto;
           pointer-events: none;
       }
@@ -183,18 +181,17 @@
           object-fit:cover;
       }
 
-@media (min-aspect-ratio: 16/9) {
 
-}
-@media (max-aspect-ratio: 16/9) {
-
-}
       @media all and (orientation:landscape) {
         h2 {
            font-size: 12vh;
            line-height: 11vh;
            padding-bottom:2.2vh;
         }
+        .coverContainer {
+           height: 100vh;
+           width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+      }
         .middle{
           padding-top:6vh;
         }
